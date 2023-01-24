@@ -99,9 +99,18 @@ function addFun(val) {
     this.style.color = "white";
   });
 
+  span.addEventListener("click", function () {
+    let currIndex = funList.indexOf(this);
+    let tempRemove = funList.splice(currIndex, 1);
+    myFunctionList.removeChild(this);
+    // funList = funList.filter((e) => {
+    //   e == this;
+    // });
+  });
+
   span.addEventListener("mouseout", function () {
-    this.style.backgroundColor = "white";
-    this.style.color = "black";
+    this.style.backgroundColor = "black";
+    this.style.color = "white";
   });
   //console.log(funList);
 }
